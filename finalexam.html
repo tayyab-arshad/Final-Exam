@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight Text on Mouseover</title>
+  <style>
+    .highlight {
+      background-color: rgb(200, 255, 0);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" id="highlightLink">On mouse over here bold words of the following paragraph will be highlighted</a>
+  <p id="paragraph">
+    <span class="highlight">We have just starred thus section for the users (beginner to intermediate) who want to work with various JavaScript problems and write scripts online to test their JavaScript skill.</span>
+  </p>
+
+  <script>
+    const highlightLink = document.getElementById("highlightLink");
+    const highlightedText = document.querySelector(".highlight");
+
+    highlightLink.addEventListener("mouseover", function() {
+      highlightedText.classList.add("highlight");
+    });
+
+    highlightLink.addEventListener("mouseout", function() {
+      highlightedText.classList.remove("highlight");
+    });
+  </script>
+</body>
+</html>
